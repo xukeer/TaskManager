@@ -13,16 +13,17 @@ public class Login {
 	static Checkbox checkBox = null;
 	static TextField password = null;
 	static TextField name = null;
-	static DBManage dbManage = null;   
+	static DBManage dbManage = null;
 
 	public static void main(String[] argv) {
 		try {
-			dbManage = new DBManage(); 
-		//	dbManage.queryData("insert into currentUser(userName,passWord,isLogin)values('xqu','123456',1)");
+			dbManage = new DBManage();
+			// dbManage.queryData("insert into
+			// currentUser(userName,passWord,isLogin)values('xqu','123456',1)");
 			dbManage.insertData("insert into TaskMain(userId,taskName,startTime,endTime,planTime,userTime) values"
 					+ "(2,'add','2015-10-12 12:23:30','2015-10-12 12:23:30',100,34) ");
 
-		//	ResultSet rs = dbManage.queryData("select * from CurrentUser");
+			// ResultSet rs = dbManage.queryData("select * from CurrentUser");
 			ResultSet rs = dbManage.queryData("select * from TaskMain");
 			while (rs.next()) {
 				String name = rs.getString("taskName");
@@ -30,7 +31,7 @@ public class Login {
 			}
 			init_login();
 			init();
-			//dbManage = new DBManage();
+			// dbManage = new DBManage();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -62,6 +63,10 @@ public class Login {
 		frame.add(button);
 		frame.setVisible(true);
 		init_event();
+	}
+
+	public void init11() {
+
 	}
 
 	private static void init_event() {
