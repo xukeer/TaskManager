@@ -66,7 +66,7 @@ public class Login {
 	}
 
 	public void init11() {
-
+        
 	}
 
 	private static void init_event() {
