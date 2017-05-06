@@ -12,7 +12,7 @@ public class Main {
 	private Button button = null;
 	public TaskDetail taskDeatail = null;
 	private DBManage dbManage = null;
-	private String userName = "";  
+	private String userName = "";
 
 	public Main(DBManage dbManage, String userName) {
 		init();
@@ -47,8 +47,7 @@ public class Main {
 				bf.append(rs.getString("ID"));
 				bf.append(rs.getString("taskName"));
 			}
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 		}
 		return bf.toString();
 	}
@@ -57,8 +56,7 @@ public class Main {
 		String re = "";
 		try {
 			re = quertData(sql).getString("COUNT");
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 		}
 		return re;
 	}
@@ -71,11 +69,14 @@ public class Main {
 		ResultSet rs = null;
 		try {
 			rs = dbManage.queryData(sql);
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 
 		}
 		return rs;
+	}
+
+	public void initTest() {
+		System.out.println("xxxx");
 	}
 
 	private void initEvent() {
