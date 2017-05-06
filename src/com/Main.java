@@ -12,7 +12,7 @@ public class Main {
 	private Button button = null;
 	public TaskDetail taskDeatail = null;
 	private DBManage dbManage = null;
-	private String userName = "";
+	private String userName = "";  
 
 	public Main(DBManage dbManage, String userName) {
 		init();
